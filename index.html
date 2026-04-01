@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualização do Bubble Sort</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.js"></script>
+    <script src="time.js"></script>
+    <script src="utils.js"></script>
+    <script src="script.js"></script>
+    <link href="../css/navbar.css" rel="stylesheet">
+    <link href="../css/common.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Visualização do Bubble Sort</h1>
+
+    <div id="canvas"></div>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td>Caso</td>
+                <td>
+                    <select id="case">
+                        <option value="random">Aleatório</option>
+                        <option value="best">Melhor caso</option>
+                        <option value="worst">Pior caso</option>
+                    </select>
+                </td>
+                <td rowspan="2">
+                    <button value="Update" onclick="start()">Iniciar</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Número de elementos
+                </td>
+                <td>
+                    <input id="length" type="number" value="20">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Iterações estimadas (pior caso)
+                </td>
+                <td>
+                    <span id="estimated-iterations">-</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Tempo decorrido
+                </td>
+                <td>
+                    <span id="timer">-</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Iterações realizadas
+                </td>
+                <td>
+                    <span id="iterations">-</span>
+                </td>
+        </table>
+
+        <hr/>
+
+        <div id="description" style="max-width: 88ch; text-align: justify;">
+            <p>
+                Um algoritmo de ordenação é utilizado para organizar dados de acordo com um critério definido pelo usuário. O Bubble Sort é um algoritmo de ordenação muito simples, usado principalmente para fins educacionais. O motivo disso é a velocidade, já que o Bubble Sort é muito lento para ordenar grandes conjuntos de dados, mas é muito fácil de entender.
+            </p>
+            <p>
+                O Bubble Sort funciona comparando um elemento com seu antecessor e trocando suas posições se o elemento for menor. Essa ideia é repetida para cada par de elementos consecutivos em um array, até que nenhuma troca aconteça, o que significa que os elementos estão ordenados.
+            </p>
+            <p>
+                Complexidade de tempo: caso médio: O(n²), melhor caso: O(n), pior caso: O(n²)
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
